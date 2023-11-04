@@ -1580,6 +1580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c86da985f984638b44015fc0e1538b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 3c26b7d8d6ae548729a8d012813b1fd8, type: 2}
 --- !u!1 &1227062575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,6 +1988,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b983d28bd5a00453a9d1997716a356ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1522864872 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 365274524442573492, guid: 5179325492bc44a9f980679bdecb5e8b, type: 3}
+  m_PrefabInstance: {fileID: 9002280692502717797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1534110207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,10 +2607,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileManager: {fileID: 2141141285}
-  cameraPos: {fileID: 0}
+  cameraPos: {fileID: 497894585}
   rooms: []
   transitionSpeed: 2
-  player: {fileID: 0}
+  player: {fileID: 1522864872}
 --- !u!4 &2141141287
 Transform:
   m_ObjectHideFlags: 0

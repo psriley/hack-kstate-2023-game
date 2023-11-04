@@ -89,18 +89,35 @@ public class FileManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Create a file (inventory item, note, etc.).
+    /// Create a file with content (ex: note).
     /// </summary>
-    public void CreateFile(string fileName)
+    public void CreateFile(string fileName, string content)
+    {
+        // Get the full file path by combining the root directory and the file name.
+        string filePath = Path.Combine(rootFilePath, fileName);
+
+        CreateEmptyFile(filePath);
+
+        using (StreamWriter sw = new StreamWriter(filePath))
+        {
+            sw.WriteLine(content);
+        }
+    }
+
+    /// <summary>
+    /// Create an empty file (ex: screwdriver).
+    /// </summary>
+    public void CreateEmptyFile(string fileName)
     {
         string createdFilePath = Path.Combine(rootFilePath, fileName);
-        // Makes sure that the correct directories exist.
-        if (DoesPathExist(createdFilePath))
+
+        // Check if the file already exists.
+        if (!File.Exists(createdFilePath))
         {
-            // Only create the file if it doesn't already exist.
-            if (File.Exists(createdFilePath)) 
+            // The file stream is properly closed when this block is exited.
+            using (File.Create(createdFilePath))
             {
-                File.Create(createdFilePath);
+                
             }
         }
     }
