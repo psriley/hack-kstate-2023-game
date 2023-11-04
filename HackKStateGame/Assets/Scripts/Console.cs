@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Console : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    GameManager gm;
+
+    private void Start() {
+        gm = GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerEnter2D(Collider2D other) {
+        // TODO: prompt the user to press "Interact" (E)
+
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        // TODO: hide the "Interact" (E)
     }
 }

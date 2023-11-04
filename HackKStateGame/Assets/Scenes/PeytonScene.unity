@@ -404,9 +404,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNum: 0
-  cameraNewPos: {fileID: 91209091}
-  cameraPos: {fileID: 962112160}
-  transitionSpeed: 25
+  cameraPos:
+  - {fileID: 0}
+  collEnter: 0
 --- !u!61 &183500115
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1228,9 +1228,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNum: 0
-  cameraNewPos: {fileID: 497894585}
-  cameraPos: {fileID: 962112160}
-  transitionSpeed: 25
+  cameraPos:
+  - {fileID: 0}
+  collEnter: 0
 --- !u!61 &1004494110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1454,6 +1454,7 @@ GameObject:
   - component: {fileID: 1145208376}
   - component: {fileID: 1145208380}
   - component: {fileID: 1145208379}
+  - component: {fileID: 1145208381}
   m_Layer: 0
   m_Name: Computer Terminal
   m_TagString: Untagged
@@ -1567,6 +1568,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1145208381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145208375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c86da985f984638b44015fc0e1538b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1227062575
 GameObject:
   m_ObjectHideFlags: 0
@@ -2588,6 +2601,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileManager: {fileID: 2141141285}
+  cameraPos: {fileID: 0}
+  rooms: []
+  transitionSpeed: 2
+  player: {fileID: 0}
 --- !u!4 &2141141287
 Transform:
   m_ObjectHideFlags: 0
@@ -2747,5 +2764,5 @@ SceneRoots:
   - {fileID: 580322820}
   - {fileID: 1755901427}
   - {fileID: 1111181376}
-  - {fileID: 169354929}
   - {fileID: 252963001}
+  - {fileID: 169354929}
