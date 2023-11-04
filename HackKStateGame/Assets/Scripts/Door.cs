@@ -26,7 +26,7 @@ public class Door : MonoBehaviour
         }else{
             Debug.Log(keyCode);
             // check that player has keyCode
-            if (gm.fileManager.DoesPlayerHaveKeyCode(keyCode)) {
+            if (gm.fileManager.DoesPlayerHaveFile("key.txt", keyCode)) {
                 OpenDoor();
             }
             else {

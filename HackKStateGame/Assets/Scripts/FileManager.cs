@@ -142,4 +142,25 @@ public class FileManager : MonoBehaviour
         Debug.Log($"File '{file}' does not exist!");
         return false;
     }
+
+    public bool DoesPlayerHaveFile(string fileName, string text = null) {
+        string file = $"{rootFilePath}/key.txt";
+        if (File.Exists(file)) 
+        {
+            Debug.Log("File exists!");
+            if ((!string.IsNullOrEmpty(text))) {
+                string[] fileText = File.ReadAllLines(file);
+                if (Array.Exists(fileText, line => line.Contains(text))) {
+                    Debug.Log($"'{text}' found!");
+                    return true;
+                }
+                Debug.Log($"Cannot find '{text}' in '{fileName}'!");
+                return false;
+            }
+
+            return true;
+        }
+        
+        return false;
+    }
 }
