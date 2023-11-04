@@ -91,13 +91,17 @@ public class FileManager : MonoBehaviour
     /// <summary>
     /// Create a file (inventory item, note, etc.).
     /// </summary>
-    public void CreateFile(string filePath, string fileName)
+    public void CreateFile(string fileName)
     {
-        if (DoesPathExist(filePath))
+        string createdFilePath = Path.Combine(rootFilePath, fileName);
+        // Makes sure that the correct directories exist.
+        if (DoesPathExist(createdFilePath))
         {
-            string createdFilePath = Path.Combine($"{rootFilePath}/{filePath}", fileName);
-            File.Create(createdFilePath);
-            File.Open(createdFilePath, FileMode.Open);
+            // Only create the file if it doesn't already exist.
+            if (File.Exists(createdFilePath)) 
+            {
+                File.Create(createdFilePath);
+            }
         }
     }
 
