@@ -26,11 +26,16 @@ public class Door : MonoBehaviour
         }else{
             Debug.Log(keyCode);
             // check that player has keyCode
-            if (gm.fileManager.DoesPlayerHaveFile("key.txt", keyCode)) {
-                OpenDoor();
+            if (!string.IsNullOrEmpty(keyCode)) {
+                if (gm.fileManager.DoesPlayerHaveFile("key.txt", keyCode)) {
+                    OpenDoor();
+                }
+                else {
+                    Debug.Log("I don't think you have the facilities for that fam");
+                }
             }
             else {
-                Debug.Log("I don't think you have the facilities for that fam");
+                OpenDoor();
             }
         }
     }

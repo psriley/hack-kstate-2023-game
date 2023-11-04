@@ -15,7 +15,6 @@ public class EventManager : MonoBehaviour
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.E)) {
-            Debug.Log(InteractEvent);
             InteractEvent?.Invoke();
         }
     }
