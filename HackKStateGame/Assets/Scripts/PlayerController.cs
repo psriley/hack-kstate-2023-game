@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D body;
+    GameManager gm;
 
     float horizontal;
     float vertical;
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     void Start ()
     {
+        gm = FindObjectOfType<GameManager>();
         body = GetComponent<Rigidbody2D>();
     }
 
