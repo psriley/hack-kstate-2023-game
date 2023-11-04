@@ -30,5 +30,4 @@ public class NotificationUI : MonoBehaviour
         yield return new WaitForSeconds(lifeTime);
         panel.SetActive(false);
     }
-    
 }

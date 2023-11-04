@@ -12,6 +12,7 @@ public class FileManager : MonoBehaviour
     public string rootFilePath;
     public float[] nums = new float[5];
     public float keyCode;
+    public NotificationUI notificationUI;
     
     private void Start() 
     {
@@ -101,8 +102,9 @@ public class FileManager : MonoBehaviour
             if (File.Exists(createdFilePath)) 
             {
                 File.Create(createdFilePath);
+                notificationUI.addFileText(fileName);
             }
-        }
+        } 
     }
 
     /// <summary>
