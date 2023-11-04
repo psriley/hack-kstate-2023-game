@@ -10,14 +10,28 @@ public class Door : MonoBehaviour
     private float moveSpeed = 2.0f;
     [SerializeField]
     private BoxCollider2D myCollider;
+    [SerializeField] private string keyCode;
 
     private bool isOpen = false;
+    private GameManager gm;
 
+    private void Start() {
+        gm = FindObjectOfType<GameManager>();
+    }
+
+    // DO WE NEED TO ALLOW THE PLAYER TO CLOSE THE DOOR? SHOULD IT JUST CLOSE BY ITSELF?
     private void ToggleDoor() {
         if (isOpen){
             CloseDoor();
         }else{
-            OpenDoor();
+            Debug.Log(keyCode);
+            // check that player has keyCode
+            if (gm.fileManager.DoesPlayerHaveKeyCode(keyCode)) {
+                OpenDoor();
+            }
+            else {
+                Debug.Log("I don't think you have the facilities for that fam");
+            }
         }
     }
     

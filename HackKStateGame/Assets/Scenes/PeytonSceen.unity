@@ -687,6 +687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7356978173368576878, guid: 5847e2e58be034d0c9f5ffa8606a257d, type: 3}
+      propertyPath: keyCode
+      value: 1776
+      objectReference: {fileID: 0}
     - target: {fileID: 8572140285217054468, guid: 5847e2e58be034d0c9f5ffa8606a257d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.29
@@ -1825,6 +1829,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2141141284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141141287}
+  - component: {fileID: 2141141286}
+  - component: {fileID: 2141141285}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2141141285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141141284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17697abc568e54483b09aa0c1ccf822d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileInputField: {fileID: 0}
+  keyCodeInputField: {fileID: 0}
+  rootFilePath: /Users/peyton/FileManagerGameRoot
+  nums:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  keyCode: 0
+--- !u!114 &2141141286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141141284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac832ef20fce4c84b1d509b69738447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileManager: {fileID: 2141141285}
+--- !u!4 &2141141287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141141284}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5755113, y: -1.7250979, z: -0.15773189}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &9002280692502717797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1906,6 +1978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 7356978173368576878, guid: 5847e2e58be034d0c9f5ffa8606a257d, type: 3}
+      propertyPath: keyCode
+      value: 2021
+      objectReference: {fileID: 0}
     - target: {fileID: 8572140285217054468, guid: 5847e2e58be034d0c9f5ffa8606a257d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.435592
@@ -1956,6 +2032,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 962112160}
+  - {fileID: 2141141287}
   - {fileID: 9002280692502717797}
   - {fileID: 9038597845350617375}
   - {fileID: 580322820}
