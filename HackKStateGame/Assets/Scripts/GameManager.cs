@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
         foreach (Room room in rooms) {
             if (room.collEnter) {
                 inRoom = room;
-                Vector3 targetPos = new Vector3(room.closestRoom(player).position.x, cameraPos.position.y, cameraPos.position.z);
+                Transform closestRoom = room.closestRoom(player);
+                Vector3 targetPos = new Vector3(closestRoom.position.x, closestRoom.position.y, cameraPos.position.z);
                 cameraPos.position = Vector3.Lerp(cameraPos.position, targetPos, transitionSpeed * Time.deltaTime);
             }
         }
