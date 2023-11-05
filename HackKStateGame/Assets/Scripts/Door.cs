@@ -41,7 +41,7 @@ public class Door : MonoBehaviour
     }
     
     private void OpenDoor() {
-        Vector3 targetPosition = doorTransform.position + Vector3.up;
+        Vector3 targetPosition = doorTransform.position + doorTransform.up;
 
         // Smoothly move the door to the target position
         StartCoroutine(MoveToPosition(targetPosition));
@@ -53,7 +53,7 @@ public class Door : MonoBehaviour
     private void CloseDoor()
     {
         // Calculate the target position (move the door upwards)
-        Vector3 targetPosition = doorTransform.position + Vector3.down;
+        Vector3 targetPosition = doorTransform.position + -doorTransform.up;
 
         // Smoothly move the door to the target position
         StartCoroutine(MoveToPosition(targetPosition));
