@@ -118,7 +118,8 @@ public class FileManager : MonoBehaviour
             // The file stream is properly closed when this block is exited.
             using (File.Create(createdFilePath))
             {
-                notificationUI.addFileText(fileName);
+                string[] fileSplit = fileName.Split("/");
+                notificationUI.addFileText(fileSplit[fileSplit.Length-1]);
             }
         } 
     }
