@@ -11,6 +11,8 @@ public class Door : MonoBehaviour
     [SerializeField]
     private BoxCollider2D myCollider;
     [SerializeField] private string keyCode;
+    [SerializeField] private AudioSource openCloseSound;
+    [SerializeField] private AudioSource lockedDoorSound;
 
     private bool isOpen = false;
     private GameManager gm;
@@ -31,7 +33,7 @@ public class Door : MonoBehaviour
                     OpenDoor();
                 }
                 else {
-                    Debug.Log("I don't think you have the facilities for that fam");
+                    lockedDoorSound.Play();
                 }
             }
             else {
@@ -41,6 +43,8 @@ public class Door : MonoBehaviour
     }
     
     private void OpenDoor() {
+        openCloseSound.Play();
+
         Vector3 targetPosition = doorTransform.position + doorTransform.up;
 
         // Smoothly move the door to the target position
@@ -52,6 +56,8 @@ public class Door : MonoBehaviour
 
     private void CloseDoor()
     {
+        openCloseSound.Play();
+        
         // Calculate the target position (move the door upwards)
         Vector3 targetPosition = doorTransform.position + -doorTransform.up;
 

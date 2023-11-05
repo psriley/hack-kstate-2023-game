@@ -7,6 +7,7 @@ public class Vent : MonoBehaviour
     [SerializeField] FileItem ventItem;
     [SerializeField] FileItem hintItem;
     [SerializeField] private string requiredItemFileName;
+    [SerializeField] private AudioSource ventSound;
 
     GameManager gm;
 
@@ -18,6 +19,7 @@ public class Vent : MonoBehaviour
         if (gm.fileManager.DoesPlayerHaveFile(requiredItemFileName)) {
             Debug.Log("Adding a note!");
             gm.fileManager.CreateFile(ventItem.fileName, ventItem.fileText);
+            ventSound.Play();
         }else {
             Debug.Log($"Player needs a {requiredItemFileName}");
             gm.fileManager.CreateFile(hintItem.fileName, hintItem.fileText);
