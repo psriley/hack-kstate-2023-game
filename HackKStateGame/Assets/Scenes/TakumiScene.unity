@@ -4416,11 +4416,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.4469614}
   m_EdgeRadius: 0
---- !u!4 &1011589234 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 365274524442573492, guid: 5179325492bc44a9f980679bdecb5e8b, type: 3}
-  m_PrefabInstance: {fileID: 9002280692502717797}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1011589239
 Animator:
   serializedVersion: 5
@@ -4442,6 +4437,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1011589240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619849510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b983d28bd5a00453a9d1997716a356ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rootDirectory: 
 --- !u!1001 &1053570660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5658,7 +5666,7 @@ MonoBehaviour:
   - {fileID: 1225230578}
   - {fileID: 331912222}
   transitionSpeed: 8
-  player: {fileID: 1011589234}
+  player: {fileID: 1011589240}
 --- !u!4 &1999431551
 Transform:
   m_ObjectHideFlags: 0
@@ -7761,6 +7769,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8953224615703040575, guid: 5179325492bc44a9f980679bdecb5e8b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1011589239}
+    - targetCorrespondingSourceObject: {fileID: 8953224615703040575, guid: 5179325492bc44a9f980679bdecb5e8b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1011589240}
   m_SourcePrefab: {fileID: 100100000, guid: 5179325492bc44a9f980679bdecb5e8b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
