@@ -163,7 +163,7 @@ public class FileManager : MonoBehaviour
     }
 
     public bool DoesPlayerHaveFile(string fileName, string text = null) {
-        string file = $"{rootFilePath}/key.txt";
+        string file = $"{rootFilePath}/{fileName}";
         if (File.Exists(file)) 
         {
             Debug.Log("File exists!");
