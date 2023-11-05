@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class FileManager : MonoBehaviour
 {
@@ -18,7 +19,13 @@ public class FileManager : MonoBehaviour
     {
         // TODO: Make a scene that the player enter's a root folder into at the beginning of the game.
         // CheckFolderPathValidity();
-        rootFilePath = "";
+        // rootFilePath = "";
+        OnSceneLoaded();
+    }
+
+    private void OnSceneLoaded() {
+        rootFilePath = PlayerPrefs.GetString("rootDirectory");
+        Debug.Log("Changed to: " + rootFilePath);
     }
 
     /// <summary>

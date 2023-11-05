@@ -64,7 +64,7 @@ public class MainMenu : MonoBehaviour
             message.text = $"Error, this directory cannot be chosen because it is not empty! Please choose an empty directory!";
         }
         else {
-            gm.player.rootDirectory = path;
+            gm.fileManager.rootFilePath = path;
             message.text = $"Successfully chose '{path}'";
         }
 
@@ -81,7 +81,8 @@ public class MainMenu : MonoBehaviour
     }
 
     public void Continue() {
-        if (!string.IsNullOrEmpty(gm.player.rootDirectory) && message.text == $"Successfully chose '{gm.player.rootDirectory}'") {
+        if (!string.IsNullOrEmpty(gm.fileManager.rootFilePath) && message.text == $"Successfully chose '{gm.fileManager.rootFilePath}'") {
+            PlayerPrefs.SetString("rootDirectory", gm.fileManager.rootFilePath);
             gm.LoadNextScene();
         }
         else {
