@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0254a13da1a4ef2b59a2b08eb96bbe, type: 3}
+  m_Name: tutorialKeyFile
+  m_EditorClassIdentifier: 
+  fileName: readme.txt
+  fileText: "[Lab Documentation - Creating the 'key.txt' File]\n\nSubject #4179,
+    to access secured areas within the virtual environment, you must create a 'key.txt'
+    file in your 'inventory' directory. Follow these steps to create the file and
+    populate it with different passcodes:\n\n1. Access your 'inventory' directory:\n  
+    - Locate the 'inventory' folder and double-click to open it.\n\n2. Create the
+    'key.txt' file:\n   - Right-click within the 'inventory' directory.\n   - Select
+    'Create' and choose 'Text Document.'\n   - Rename the newly created text document
+    to 'key.txt'.\n\n3. Edit 'key.txt' with various passcodes:\n   - Double-click
+    'key.txt' to open it with a text editor.\n   - Enter passcodes, one per line,
+    like this:\n\n   Passcodes:\n   - 4319\n   - 8926\n   - 5764\n   - 1097\n   -
+    2458\n\nRemember that the 'key.txt' file is essential for accessing secured areas
+    and solving puzzles within the virtual environment. The first code you'll need
+    is '4319.' Use it wisely to progress further in your quest to regain control.\n\nBest
+    of luck on your journey."
