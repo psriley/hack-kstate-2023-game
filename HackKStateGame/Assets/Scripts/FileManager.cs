@@ -17,25 +17,25 @@ public class FileManager : MonoBehaviour
     private void Start() 
     {
         // TODO: Make a scene that the player enter's a root folder into at the beginning of the game.
-        CheckFolderPathValidity();
+        // CheckFolderPathValidity();
     }
 
     /// <summary>
     /// Checks if the file exists in the user's file structure. MAKE SURE TO MAKE A NEW DIRECTORY INSIDE OF THIS ROOT DIRECTORY SO THERE ARE NO OVERWRITES
     /// </summary>
-    public void CheckFolderPathValidity()
+    public bool CheckFolderPathValidity(string inputPath)
     {
-        // string inputPath = fileInputField.text;
-
-        if (Directory.Exists(rootFilePath))
+        if (Directory.Exists(inputPath))
         {
             // The folder path is valid; you can proceed with your game logic here.
-            Debug.Log("Valid folder path: " + rootFilePath);
+            Debug.Log("Valid folder path: " + inputPath);
+            return true;
         }
         else
         {
             // Display an error message to the player or handle the invalid path.
-            Debug.LogWarning("Invalid folder path: " + rootFilePath);
+            Debug.LogWarning("Invalid folder path: " + inputPath);
+            return false;
         }
     }
 
