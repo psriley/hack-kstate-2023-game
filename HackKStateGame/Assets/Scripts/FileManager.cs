@@ -14,6 +14,7 @@ public class FileManager : MonoBehaviour
     public float[] nums = new float[5];
     public float keyCode;
     public NotificationUI notificationUI;
+    public AudioSource newFileSound;
     
     private void Start() 
     {
@@ -128,6 +129,7 @@ public class FileManager : MonoBehaviour
             {
                 string[] fileSplit = fileName.Split("/");
                 notificationUI.addFileText(fileSplit[fileSplit.Length-1]);
+                newFileSound.Play();
             }
         } 
     }

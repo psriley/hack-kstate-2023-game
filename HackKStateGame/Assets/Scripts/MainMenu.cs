@@ -40,7 +40,9 @@ public class MainMenu : MonoBehaviour
     }
 
     public void SetRootDirectory() {
+        // THIS IS ONLY USABLE IN THE UNITY EDITOR!
         string path = EditorUtility.OpenFolderPanel("Choose Empty Root Folder", "", "");
+
         // bool validDirectory = !Directory.EnumerateFileSystemEntries(path).Any();
 
         // if (validDirectory) {
