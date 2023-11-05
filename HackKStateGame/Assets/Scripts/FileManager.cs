@@ -18,6 +18,7 @@ public class FileManager : MonoBehaviour
     {
         // TODO: Make a scene that the player enter's a root folder into at the beginning of the game.
         // CheckFolderPathValidity();
+        rootFilePath = "";
     }
 
     /// <summary>

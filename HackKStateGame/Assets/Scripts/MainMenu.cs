@@ -79,4 +79,13 @@ public class MainMenu : MonoBehaviour
         //     gm.SetRootDirectory(rootDirectory);
         // }
     }
+
+    public void Continue() {
+        if (!string.IsNullOrEmpty(gm.player.rootDirectory) && message.text == $"Successfully chose '{gm.player.rootDirectory}'") {
+            gm.LoadNextScene();
+        }
+        else {
+            message.text = "A valid empty root directory must be chosen to continue";
+        }
+    }
 }

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: efe8e6dbdd67144fc93e8ade7000e8bf
+  - enabled: 1
+    path: Assets/Scenes/TakumiScene.unity
+    guid: 918d94f53c1b24bb1b9d7797adaf72e2
   m_configObjects: {}
