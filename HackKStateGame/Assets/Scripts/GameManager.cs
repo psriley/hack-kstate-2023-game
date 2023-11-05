@@ -36,24 +36,24 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentScene.buildIndex + 1);
     }
 
-    public void SetRootDirectory(string path) {
-        // string rootDirectory = path;
+    // public void SetRootDirectory(string path) {
+    //     // string rootDirectory = path;
 
-        // if (path[path.Length - 1] == '/') {
-        //     rootDirectory = path.Remove(path.Length - 1);
-        // }
-        // if (fileManager.CheckFolderPathValidity(rootDirectory)) {
-        //     player.rootDirectory = rootDirectory;
-        // }
-        // else {
+    //     // if (path[path.Length - 1] == '/') {
+    //     //     rootDirectory = path.Remove(path.Length - 1);
+    //     // }
+    //     // if (fileManager.CheckFolderPathValidity(rootDirectory)) {
+    //     //     player.rootDirectory = rootDirectory;
+    //     // }
+    //     // else {
 
-        // }
+    //     // }
 
-        player.rootDirectory = path;
+    //     player.rootDirectory = path;
 
 
-        LoadNextScene();
-    }
+    //     LoadNextScene();
+    // }
 
     public void ExitGame() {
         // SCARY CODE THAT DELETES A FOLDER!
